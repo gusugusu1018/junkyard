@@ -6,14 +6,14 @@ void
 thread_1 () {
         for (int i = 0; i < MAX; i++) {
                 std::cout << "hello" << std::endl;
-                boost::this_thread::sleep(boost::posix_time::milliseconds(100));
+                boost::this_thread::sleep(boost::posix_time::milliseconds(1000));
         }
 }
 void
 thread_2 () {
         for (int i = 0; i < MAX; i++) {
                 std::cout << "world" << std::endl;
-                boost::this_thread::sleep(boost::posix_time::milliseconds(100));
+                boost::this_thread::sleep(boost::posix_time::milliseconds(1000));
         }
 }
  
