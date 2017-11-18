@@ -1,0 +1,4 @@
+set terminal png
+set output 'gauss.png'
+plot 'test.csv' title 'gauss' with lines
+#plot sin(pi*x)/(pi*x)
