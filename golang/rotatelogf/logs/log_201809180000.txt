@@ -1,0 +1,2 @@
+[Sample] 2018/09/18 14:02:47 rotatelogf.go:20: [INFO] Information
+[Sample] 2018/09/18 14:04:22 rotatelogf.go:22: [INFO] Information
