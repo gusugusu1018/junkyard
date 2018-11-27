@@ -12,7 +12,10 @@ namespace panorama
             var mats = new List<Mat>();
             for (int i = 0; i < count; i++)
             {
-                var filename = "C:\\Users\\sv06\\Documents\\junkyard\\opencv\\panorama\\srck" + i.ToString() + ".JPG";
+                //var filename = "C:\\Users\\sv06\\Documents\\dir3gui\\dir3gui\\bin\\x86\\Release\\rec\\20181106204016\\" + i.ToString() + ".jpg";
+                //var filename = "C:\\Users\\sv06\\Documents\\dir3gui\\dir3gui\\bin\\x86\\Release\\rec\\20181106204550\\" + i.ToString() + ".jpg";
+                var filename = "C:\\Users\\sv06\\Documents\\dir3gui\\dir3gui\\bin\\x86\\Release\\rec\\20181107133423\\" + i.ToString() + ".jpg";
+
                 var m = new Mat(filename, ImreadModes.Color);
                 mats.Add(m.Clone());
             }
@@ -21,9 +24,9 @@ namespace panorama
         }
         static void Main(string[] args)
         {
-            Mat[] images = SelectStitchingImages(4);
+            Mat[] images = SelectStitchingImages(10);
             Mat pano = new Mat();
-            var stitcher = Stitcher.Create(false);
+            var stitcher = Stitcher.Create(true);
             Console.Write("Stitching start...");
             var status = stitcher.Stitch(images, pano);
             Console.WriteLine(" finish (status:{0})", status);
